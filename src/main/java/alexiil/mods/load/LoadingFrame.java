@@ -70,7 +70,9 @@ public class LoadingFrame extends JFrame {
         }
     }
 
-    /** Launch the application. */
+    /**
+     * Launch the application.
+     */
     public static LoadingFrame openWindow() {
         try {
             LoadingFrame frame = new LoadingFrame();
@@ -94,7 +96,9 @@ public class LoadingFrame extends JFrame {
                 bounds.height);
     }
 
-    /** Create the frame. */
+    /**
+     * Create the frame.
+     */
     public LoadingFrame() {
         setTitle("Minecraft Loading");
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);

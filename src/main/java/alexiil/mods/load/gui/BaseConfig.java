@@ -22,7 +22,9 @@ public class BaseConfig extends GuiScreen {
     private int xPosHelp = 0;
     private List<List<String>> helpText;
     private GuiScreen parent;
-    /** Used to determine the button positions across the top */
+    /**
+     * Used to determine the button positions across the top
+     */
     protected int totalLength;
 
     public BaseConfig(GuiScreen screen) {

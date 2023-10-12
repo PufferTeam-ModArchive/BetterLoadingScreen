@@ -9,7 +9,11 @@ import net.minecraftforge.common.MinecraftForge;
 import com.google.common.eventbus.Subscribe;
 
 import cpw.mods.fml.common.ModContainer;
-import cpw.mods.fml.common.event.*;
+import cpw.mods.fml.common.event.FMLConstructionEvent;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLLoadCompleteEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.relauncher.FMLLaunchHandler;
 
 public class ModLoadingListener {
@@ -26,7 +30,9 @@ public class ModLoadingListener {
 
         private String translatedName = null;
         final String name;
-        /** If this state is only called once. This is false for all except for FINAL_LOADING */
+        /**
+         * If this state is only called once. This is false for all except for FINAL_LOADING
+         */
         final boolean isLoneState;
         /**
          * If this is true, then ModStage.getNext will skip this, but it will still be included in the percentage

@@ -1,14 +1,18 @@
 package alexiil.mods.load;
 
-import static org.lwjgl.opengl.GL11.GL_ALPHA_TEST;
-import static org.lwjgl.opengl.GL11.GL_DEPTH_TEST;
-import static org.lwjgl.opengl.GL11.GL_GREATER;
-import static org.lwjgl.opengl.GL11.GL_LEQUAL;
-import static org.lwjgl.opengl.GL11.GL_MODELVIEW;
-import static org.lwjgl.opengl.GL11.GL_PROJECTION;
+import static org.lwjgl.opengl.GL11.*;
 
-import java.awt.*;
-import java.io.*;
+import java.awt.Color;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.PrintStream;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import java.nio.charset.StandardCharsets;
@@ -345,8 +349,8 @@ public class MinecraftDisplayer implements IDisplayer {
         List<String> lines = new ArrayList<>();
         try {
             reader = new BufferedReader((new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8))); // new
-                                                                                                                     // BufferedReader(new
-                                                                                                                     // FileReader(file));
+            // BufferedReader(new
+            // FileReader(file));
             StringBuffer inputBuffer = new StringBuffer();
             String line;
             while ((line = reader.readLine()) != null) {
@@ -671,11 +675,11 @@ public class MinecraftDisplayer implements IDisplayer {
 
         try {
             lbRGB[0] = (float) (Color.decode("#" + loadingBarsColor).getRed() & 255) / 255.0f; // Color.decode("#" +
-                                                                                               // loadingBarsColor).getRed();
+            // loadingBarsColor).getRed();
             lbRGB[1] = (float) (Color.decode("#" + loadingBarsColor).getGreen() & 255) / 255.0f; // Color.decode("#" +
-                                                                                                 // loadingBarsColor).getGreen();
+            // loadingBarsColor).getGreen();
             lbRGB[2] = (float) (Color.decode("#" + loadingBarsColor).getBlue() & 255) / 255.0f; // Color.decode("#" +
-                                                                                                // loadingBarsColor).getBlue();
+            // loadingBarsColor).getBlue();
             // BetterLoadingScreen.log.debug("The color: " + String.valueOf(lbRGB[0]) + ";" + String.valueOf(lbRGB[1]) +
             // ";" + String.valueOf(lbRGB[2]));
         } catch (Exception e) {

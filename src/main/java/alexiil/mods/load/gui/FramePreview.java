@@ -26,7 +26,9 @@ public class FramePreview extends JFrame {
 
     private JTextField textField;
 
-    /** Create the frame. */
+    /**
+     * Create the frame.
+     */
     public FramePreview(final GuiPreview gui) {
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setBounds(100, 100, 450, 300);

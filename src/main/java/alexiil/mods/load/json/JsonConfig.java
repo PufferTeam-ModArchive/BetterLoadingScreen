@@ -23,7 +23,9 @@ public class JsonConfig<T> {
         this.defaultConfig = defaultConfig;
     }
 
-    /** Overwrite any existing config: Treat it as a default config */
+    /**
+     * Overwrite any existing config: Treat it as a default config
+     */
     public void createNew() {
         BufferedWriter writer = null;
         try {

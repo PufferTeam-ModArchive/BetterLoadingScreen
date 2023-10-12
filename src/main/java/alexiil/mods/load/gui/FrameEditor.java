@@ -36,7 +36,9 @@ public class FrameEditor extends JFrame {
     private final GuiPreview gui;
     private ImageRender[] renders;
 
-    /** Create the frame. */
+    /**
+     * Create the frame.
+     */
     public FrameEditor(GuiPreview preview) {
         this.gui = preview;
         renders = gui.getImageData();
